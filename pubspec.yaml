@@ -71,6 +71,8 @@ flutter:
      - assets/newforumpost.png
      - assets/addimage@2x.png
      - assets/addimage.png
+     - assets/Image4@2x.png
+     - assets/Image4.png
   fonts:
     - family: Raleway
       fonts:

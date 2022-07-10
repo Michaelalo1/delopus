@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/painting.dart';
 
 void main() {
   runApp(const MyApp());
@@ -40,82 +41,74 @@ class _FeedState extends State<Feed> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: const Color.fromRGBO(230, 230, 230, 1),
       body: Column(
         children: [
           ConstrainedBox(
             constraints: const BoxConstraints(
-              maxHeight: 98,
+              maxHeight: 200,
+              minWidth: double.infinity,
             ),
             child: Container(
-              padding: const EdgeInsets.only(top: 35),
-              color: const Color.fromRGBO(18, 17, 29, 1),
+              padding: const EdgeInsets.only(
+                  top: 45, bottom: 15, right: 15, left: 15),
+              color: const Color.fromRGBO(23, 22, 38, 1),
               child: Row(
-                // crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisAlignment: MainAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Expanded(
-                    child: Image.asset(
-                      'assets/Layer9copy2x.png',
-                      height: 31,
-                      width: 30,
-                    ),
+                  Image.asset(
+                    'assets/Layer9copy2x.png',
+                    height: 46,
+                    width: 45,
                   ),
-                  Expanded(
-                    child: Image.asset(
-                      'assets/Layer2copy11@2x.png',
-                      height: 23.5,
-                      width: 90.3,
-                    ),
+                  Image.asset(
+                    'assets/Layer2copy11@2x.png',
+                    height: 28.5,
+                    width: 95.3,
                   ),
-                  Expanded(
-                    child: Image.asset(
-                      'assets/Layer11copy.png',
-                    ),
+                  Image.asset(
+                    'assets/Layer11copy.png',
+                    height: 25,
+                    width: 25,
                   ),
                 ],
               ),
             ),
           ),
           Container(
-            padding: EdgeInsets.symmetric(horizontal: 8, vertical: 10.45),
-            color: Colors.white,
+            padding:
+                const EdgeInsets.symmetric(horizontal: 10, vertical: 10.45),
             child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: const [
-                Expanded(
-                  child: Text(
-                    'DISCUSSIONS',
-                    textAlign: TextAlign.left,
-                    style: TextStyle(
-                      fontWeight: FontWeight.w500,
-                      fontFamily: 'Axiforma-Medium',
-                      fontSize: 15,
-                      color: Color.fromRGBO(18, 17, 29, 1),
-                    ),
+                Text(
+                  'DISCUSSIONS',
+                  textAlign: TextAlign.left,
+                  style: TextStyle(
+                    fontWeight: FontWeight.w500,
+                    fontFamily: 'Axiforma-Medium',
+                    fontSize: 14,
+                    color: Color.fromRGBO(23, 22, 38, 1),
                   ),
                 ),
-                Expanded(
-                  child: Text(
-                    'PROJECTS',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      fontWeight: FontWeight.w500,
-                      fontFamily: 'Axiforma-Medium',
-                      fontSize: 14,
-                      color: Color.fromRGBO(243, 153, 15, 1),
-                    ),
+                Text(
+                  'PROJECTS',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontWeight: FontWeight.w500,
+                    fontFamily: 'Axiforma-Medium',
+                    fontSize: 14,
+                    color: Color.fromRGBO(243, 153, 15, 1),
                   ),
                 ),
-                Expanded(
-                  child: Text(
-                    'MY PROJECTS',
-                    textAlign: TextAlign.right,
-                    style: TextStyle(
-                      fontWeight: FontWeight.w500,
-                      fontFamily: 'Axiforma-Medium',
-                      fontSize: 14,
-                      color: Color.fromRGBO(18, 17, 29, 1),
-                    ),
+                Text(
+                  'MY PROJECTS',
+                  textAlign: TextAlign.right,
+                  style: TextStyle(
+                    fontWeight: FontWeight.w500,
+                    fontFamily: 'Axiforma-Medium',
+                    fontSize: 14,
+                    color: Color.fromRGBO(23, 22, 38, 1),
                   ),
                 ),
               ],
@@ -128,38 +121,135 @@ class _FeedState extends State<Feed> {
             indent: 0,
             endIndent: 0,
           ),
-          SizedBox(height: 15),
-          Row(
+          Expanded(
+              child: ListView(
             children: [
-              Expanded(
-                child: Container(
-                  child: Image.asset(
-                    'assets/settings1@2x.png',
-                    height: 27,
-                    width: 27,
-                  ),
+              Container(
+                padding: const EdgeInsets.symmetric(horizontal: 10),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    ConstrainedBox(
+                      constraints: BoxConstraints(minHeight: 50, minWidth: 40),
+                      child: Container(
+                        padding:
+                            EdgeInsets.symmetric(horizontal: 9, vertical: 5),
+                        decoration: const BoxDecoration(
+                            borderRadius: BorderRadius.all(
+                              Radius.circular(15),
+                            ),
+                            color: Colors.white),
+                        child: Row(
+                          children: [
+                            Image.asset(
+                              'assets/settings1@2x.png',
+                              height: 30,
+                              width: 30,
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    SizedBox(width: 10),
+                    ConstrainedBox(
+                      constraints: BoxConstraints(minHeight: 50, minWidth: 10),
+                      child: Container(
+                        padding:
+                            EdgeInsets.symmetric(horizontal: 10, vertical: 0),
+                        decoration: const BoxDecoration(
+                            borderRadius: BorderRadius.all(
+                              Radius.circular(15),
+                            ),
+                            color: Colors.white),
+                        child: Row(
+                          children: [
+                            Image.asset(
+                              'assets/newforumpost@2x.png',
+                              height: 27,
+                              width: 27,
+                            ),
+                            SizedBox(width: 10),
+                            const Text(
+                              'add a thought',
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                  color: Color.fromRGBO(23, 22, 38, 0.5),
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w500),
+                            )
+                          ],
+                        ),
+                      ),
+                    ),
+                    ConstrainedBox(
+                      constraints: BoxConstraints(minHeight: 50, minWidth: 10),
+                      child: Container(
+                        padding:
+                            EdgeInsets.symmetric(horizontal: 10, vertical: 0),
+                        decoration: const BoxDecoration(
+                            borderRadius: BorderRadius.all(
+                              Radius.circular(15),
+                            ),
+                            color: Colors.white),
+                        child: Row(
+                          children: [
+                            Image.asset(
+                              'assets/addimage@2x.png',
+                              height: 27,
+                              width: 27,
+                            ),
+                            SizedBox(width: 10),
+                            const Text(
+                              'post a project',
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                  color: Color.fromRGBO(23, 22, 38, 0.5),
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w500),
+                            )
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
               ),
-              Expanded(
-                child: Container(
-                  child: Image.asset(
-                    'assets/newforumpost@2x.png',
-                    height: 27,
-                    width: 27,
+              SizedBox(height: 10),
+
+              // FEED DATA
+              // FEED DATA
+              // FEED DATA
+
+              ConstrainedBox(
+                  constraints: BoxConstraints(
+                    minHeight: 512.04,
                   ),
+                  child: Container(
+                    margin: EdgeInsets.symmetric(horizontal: 10),
+                    padding: EdgeInsets.symmetric(horizontal: 10, vertical: 0),
+                    decoration: const BoxDecoration(
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(15),
+                        ),
+                        color: Colors.white),
+                  )),
+              SizedBox(height: 10),
+              ConstrainedBox(
+                constraints: BoxConstraints(
+                  minHeight: 512.04,
                 ),
-              ),
-              Expanded(
                 child: Container(
-                  child: Image.asset(
-                    'assets/addimage@2x.png',
-                    height: 27,
-                    width: 27,
-                  ),
+                  margin: EdgeInsets.symmetric(horizontal: 10),
+                  padding: EdgeInsets.symmetric(horizontal: 10, vertical: 0),
+                  decoration: const BoxDecoration(
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(15),
+                      ),
+                      color: Colors.white),
                 ),
               )
             ],
-          )
+          ))
         ],
       ),
     );
