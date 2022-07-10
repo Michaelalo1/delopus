@@ -75,6 +75,16 @@ flutter:
      - assets/Image4.png
      - assets/3dots@2x.png
      - assets/3dots.png
+     - assets/Image3@2x.png
+     - assets/Image3.png
+     - assets/like-orange@2x.png
+     - assets/like-orange.png
+     - assets/saveline-orange.png
+     - assets/saveline-orange@2x.png
+     - assets/comment.png
+     - assets/comment@2x.png
+     - assets/send-orange@2x.png
+     - assets/send-orange.png
   fonts:
     - family: Axiforma-Medium
       fonts:

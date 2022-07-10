@@ -225,10 +225,10 @@ class _FeedState extends State<Feed> {
               ConstrainedBox(
                   constraints: BoxConstraints(
                     minHeight: 512.04,
+                    maxHeight: 512.04,
                   ),
                   child: Container(
                     margin: EdgeInsets.symmetric(horizontal: 10),
-                    padding: EdgeInsets.symmetric(horizontal: 10, vertical: 0),
                     decoration: const BoxDecoration(
                         borderRadius: BorderRadius.all(
                           Radius.circular(15),
@@ -236,59 +236,435 @@ class _FeedState extends State<Feed> {
                         color: Colors.white),
                     child: Column(
                       children: [
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Row(
-                              children: [
-                                Image.asset('assets/Image4@2x.png',
-                                    height: 47, width: 47),
-                                SizedBox(width: 8),
-                                Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: const [
-                                    Text(
-                                      'Fajas OK',
-                                      style: TextStyle(
-                                          fontFamily: 'Axiforma-Regular',
-                                          fontSize: 18,
-                                          fontWeight: FontWeight.w500,
-                                          color: Color.fromRGBO(23, 22, 38, 1)),
-                                    ),
-                                    Text('Architect',
-                                        textAlign: TextAlign.left,
+                        Container(
+                          padding: EdgeInsets.symmetric(
+                              horizontal: 10, vertical: 10),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Row(
+                                children: [
+                                  Image.asset('assets/Image4@2x.png',
+                                      height: 47, width: 47),
+                                  SizedBox(width: 8),
+                                  Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: const [
+                                      Text(
+                                        'Fajas OK',
                                         style: TextStyle(
                                             fontFamily: 'Axiforma-Regular',
-                                            fontSize: 14,
-                                            fontWeight: FontWeight.w400,
-                                            color: Color.fromRGBO(
-                                                118, 129, 168, 1)))
-                                  ],
-                                )
-                              ],
-                            ),
-                            Image.asset('assets/3dots@2x.png')
-                          ],
+                                            fontSize: 18,
+                                            fontWeight: FontWeight.w500,
+                                            color:
+                                                Color.fromRGBO(23, 22, 38, 1)),
+                                      ),
+                                      Text('Architect',
+                                          textAlign: TextAlign.left,
+                                          style: TextStyle(
+                                              fontFamily: 'Axiforma-Regular',
+                                              fontSize: 14,
+                                              fontWeight: FontWeight.w400,
+                                              color: Color.fromRGBO(
+                                                  118, 129, 168, 1)))
+                                    ],
+                                  )
+                                ],
+                              ),
+                              Image.asset(
+                                'assets/3dots@2x.png',
+                                height: 32,
+                                width: 32,
+                              )
+                            ],
+                          ),
                         ),
+                        Image.asset(
+                          'assets/Image3@2x.png',
+                          height: 305.61,
+                          width: 500.53,
+                        ),
+                        Container(
+                          margin: EdgeInsets.only(top: 10, right: 12, left: 10),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Row(
+                                children: [
+                                  Image.asset(
+                                    'assets/like-orange@2x.png',
+                                    height: 30,
+                                    width: 30,
+                                  ),
+                                  SizedBox(width: 5),
+                                  Image.asset(
+                                    'assets/saveline-orange@2x.png',
+                                    height: 30,
+                                    width: 30,
+                                  ),
+                                  SizedBox(width: 5),
+                                  Image.asset(
+                                    'assets/comment@2x.png',
+                                    height: 30,
+                                    width: 30,
+                                  )
+                                ],
+                              ),
+                              Image.asset(
+                                'assets/send-orange@2x.png',
+                                height: 30,
+                                width: 30,
+                              )
+                            ],
+                          ),
+                        ),
+                        Container(
+                          padding: EdgeInsets.only(left: 10, top: 10),
+                          child: Row(
+                            children: const [
+                              Text(
+                                '10 likes',
+                                style: TextStyle(
+                                    fontSize: 12,
+                                    color: Color.fromRGBO(143, 160, 174, 1)),
+                              ),
+                              SizedBox(width: 5),
+                              Text(
+                                '|',
+                                style: TextStyle(
+                                    fontSize: 12,
+                                    color: Color.fromRGBO(143, 160, 174, 1)),
+                              ),
+                              SizedBox(width: 5),
+                              Text(
+                                '0 comments',
+                                style: TextStyle(
+                                    fontSize: 12,
+                                    color: Color.fromRGBO(143, 160, 174, 1)),
+                              ),
+                            ],
+                          ),
+                        ),
+                        Container(
+                            padding: EdgeInsets.only(left: 10, top: 10),
+                            child: Row(
+                              children: const [
+                                Text('Nadil Residence',
+                                    style: TextStyle(
+                                        fontFamily: 'Axiforma-Regular',
+                                        fontSize: 18,
+                                        fontWeight: FontWeight.w500,
+                                        color: Color.fromRGBO(23, 22, 38, 1))),
+                              ],
+                            ))
                       ],
                     ),
                   )),
-              const SizedBox(height: 10),
+
+              SizedBox(height: 10),
+
+              // SECOND FEED SCREEN
+              // SECOND FEED SCREEN
+
               ConstrainedBox(
-                constraints: const BoxConstraints(
-                  minHeight: 512.04,
-                ),
-                child: Container(
-                  margin: const EdgeInsets.symmetric(horizontal: 10),
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 10, vertical: 0),
-                  decoration: const BoxDecoration(
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(15),
-                      ),
-                      color: Colors.white),
-                ),
-              )
+                  constraints: const BoxConstraints(
+                    minHeight: 512.04,
+                    maxHeight: 512.04,
+                  ),
+                  child: Container(
+                    margin: EdgeInsets.symmetric(horizontal: 10),
+                    decoration: const BoxDecoration(
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(15),
+                        ),
+                        color: Colors.white),
+                    child: Column(
+                      children: [
+                        Container(
+                          padding: EdgeInsets.symmetric(
+                              horizontal: 10, vertical: 10),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Row(
+                                children: [
+                                  Image.asset('assets/Image4@2x.png',
+                                      height: 47, width: 47),
+                                  SizedBox(width: 8),
+                                  Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: const [
+                                      Text(
+                                        'Fajas OK',
+                                        style: TextStyle(
+                                            fontFamily: 'Axiforma-Regular',
+                                            fontSize: 18,
+                                            fontWeight: FontWeight.w500,
+                                            color:
+                                                Color.fromRGBO(23, 22, 38, 1)),
+                                      ),
+                                      Text('Architect',
+                                          textAlign: TextAlign.left,
+                                          style: TextStyle(
+                                              fontFamily: 'Axiforma-Regular',
+                                              fontSize: 14,
+                                              fontWeight: FontWeight.w400,
+                                              color: Color.fromRGBO(
+                                                  118, 129, 168, 1)))
+                                    ],
+                                  )
+                                ],
+                              ),
+                              Image.asset(
+                                'assets/3dots@2x.png',
+                                height: 32,
+                                width: 32,
+                              )
+                            ],
+                          ),
+                        ),
+                        Image.asset(
+                          'assets/Image3@2x.png',
+                          height: 305.61,
+                          width: 500.53,
+                        ),
+                        Container(
+                          margin: EdgeInsets.only(top: 10, right: 12, left: 10),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Row(
+                                children: [
+                                  Image.asset(
+                                    'assets/like-orange@2x.png',
+                                    height: 30,
+                                    width: 30,
+                                  ),
+                                  SizedBox(width: 5),
+                                  Image.asset(
+                                    'assets/saveline-orange@2x.png',
+                                    height: 30,
+                                    width: 30,
+                                  ),
+                                  SizedBox(width: 5),
+                                  Image.asset(
+                                    'assets/comment@2x.png',
+                                    height: 30,
+                                    width: 30,
+                                  )
+                                ],
+                              ),
+                              Image.asset(
+                                'assets/send-orange@2x.png',
+                                height: 30,
+                                width: 30,
+                              )
+                            ],
+                          ),
+                        ),
+                        Container(
+                          padding: EdgeInsets.only(left: 10, top: 10),
+                          child: Row(
+                            children: const [
+                              Text(
+                                '10 likes',
+                                style: TextStyle(
+                                    fontSize: 12,
+                                    color: Color.fromRGBO(143, 160, 174, 1)),
+                              ),
+                              SizedBox(width: 5),
+                              Text(
+                                '|',
+                                style: TextStyle(
+                                    fontSize: 12,
+                                    color: Color.fromRGBO(143, 160, 174, 1)),
+                              ),
+                              SizedBox(width: 5),
+                              Text(
+                                '0 comments',
+                                style: TextStyle(
+                                    fontSize: 12,
+                                    color: Color.fromRGBO(143, 160, 174, 1)),
+                              ),
+                            ],
+                          ),
+                        ),
+                        Container(
+                            padding: EdgeInsets.only(left: 10, top: 10),
+                            child: Row(
+                              children: const [
+                                Text('Nadil Residence',
+                                    style: TextStyle(
+                                        fontFamily: 'Axiforma-Regular',
+                                        fontSize: 18,
+                                        fontWeight: FontWeight.w500,
+                                        color: Color.fromRGBO(23, 22, 38, 1))),
+                              ],
+                            ))
+                      ],
+                    ),
+                  )),
+              //THIRD FEED SCREEN
+              //THIRD FEED SCREEN
+              //THIRD FEED SCREEN
+              SizedBox(height: 10),
+
+              ConstrainedBox(
+                  constraints: BoxConstraints(
+                    minHeight: 512.04,
+                    maxHeight: 512.04,
+                  ),
+                  child: Container(
+                    margin: EdgeInsets.symmetric(horizontal: 10),
+                    decoration: const BoxDecoration(
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(15),
+                        ),
+                        color: Colors.white),
+                    child: Column(
+                      children: [
+                        Container(
+                          padding: EdgeInsets.symmetric(
+                              horizontal: 10, vertical: 10),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Row(
+                                children: [
+                                  Image.asset('assets/Image4@2x.png',
+                                      height: 47, width: 47),
+                                  SizedBox(width: 8),
+                                  Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: const [
+                                      Text(
+                                        'Fajas OK',
+                                        style: TextStyle(
+                                            fontFamily: 'Axiforma-Regular',
+                                            fontSize: 18,
+                                            fontWeight: FontWeight.w500,
+                                            color:
+                                                Color.fromRGBO(23, 22, 38, 1)),
+                                      ),
+                                      Text('Architect',
+                                          textAlign: TextAlign.left,
+                                          style: TextStyle(
+                                              fontFamily: 'Axiforma-Regular',
+                                              fontSize: 14,
+                                              fontWeight: FontWeight.w400,
+                                              color: Color.fromRGBO(
+                                                  118, 129, 168, 1)))
+                                    ],
+                                  )
+                                ],
+                              ),
+                              Image.asset(
+                                'assets/3dots@2x.png',
+                                height: 32,
+                                width: 32,
+                              )
+                            ],
+                          ),
+                        ),
+                        Image.asset(
+                          'assets/Image3@2x.png',
+                          height: 305.61,
+                          width: 500.53,
+                        ),
+                        Container(
+                          margin: EdgeInsets.only(top: 10, right: 12, left: 10),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Row(
+                                children: [
+                                  Image.asset(
+                                    'assets/like-orange@2x.png',
+                                    height: 30,
+                                    width: 30,
+                                  ),
+                                  SizedBox(width: 5),
+                                  Image.asset(
+                                    'assets/saveline-orange@2x.png',
+                                    height: 30,
+                                    width: 30,
+                                  ),
+                                  SizedBox(width: 5),
+                                  Image.asset(
+                                    'assets/comment@2x.png',
+                                    height: 30,
+                                    width: 30,
+                                  )
+                                ],
+                              ),
+                              Image.asset(
+                                'assets/send-orange@2x.png',
+                                height: 30,
+                                width: 30,
+                              )
+                            ],
+                          ),
+                        ),
+                        Container(
+                          padding: EdgeInsets.only(left: 10, top: 10),
+                          child: Row(
+                            children: const [
+                              Text(
+                                '10 likes',
+                                style: TextStyle(
+                                    fontSize: 12,
+                                    color: Color.fromRGBO(143, 160, 174, 1)),
+                              ),
+                              SizedBox(width: 5),
+                              Text(
+                                '|',
+                                style: TextStyle(
+                                    fontSize: 12,
+                                    color: Color.fromRGBO(143, 160, 174, 1)),
+                              ),
+                              SizedBox(width: 5),
+                              Text(
+                                '0 comments',
+                                style: TextStyle(
+                                    fontSize: 12,
+                                    color: Color.fromRGBO(143, 160, 174, 1)),
+                              ),
+                            ],
+                          ),
+                        ),
+                        Container(
+                            padding: EdgeInsets.only(left: 10, top: 10),
+                            child: Row(
+                              children: const [
+                                Text('Nadil Residence',
+                                    style: TextStyle(
+                                        fontFamily: 'Axiforma-Regular',
+                                        fontSize: 18,
+                                        fontWeight: FontWeight.w500,
+                                        color: Color.fromRGBO(23, 22, 38, 1))),
+                              ],
+                            ))
+                      ],
+                    ),
+                  )),
+              // const SizedBox(height: 10),
+              // ConstrainedBox(
+              //   constraints:
+              //       const BoxConstraints(minHeight: 512.04, maxHeight: 512.04),
+              //   child: Container(
+              //     margin: const EdgeInsets.symmetric(horizontal: 10),
+              //     padding:
+              //         const EdgeInsets.symmetric(horizontal: 10, vertical: 0),
+              //     decoration: const BoxDecoration(
+              //         borderRadius: BorderRadius.all(
+              //           Radius.circular(15),
+              //         ),
+              //         color: Colors.white),
+              //   ),
+              // )
             ],
           ))
         ],
