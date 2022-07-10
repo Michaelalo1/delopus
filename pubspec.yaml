@@ -73,10 +73,18 @@ flutter:
      - assets/addimage.png
      - assets/Image4@2x.png
      - assets/Image4.png
+     - assets/3dots@2x.png
+     - assets/3dots.png
   fonts:
-    - family: Raleway
+    - family: Axiforma-Medium
       fonts:
         - asset: fonts/Axiforma-Medium.ttf
+    - family: Product-Sans-Regular
+      fonts:
+        - asset: fonts/Product-Sans-Regular.ttf
+    - family: Axiforma-Regular
+      fonts:
+        - asset: fonts/Axiforma-Regular.ttf
 
 
 

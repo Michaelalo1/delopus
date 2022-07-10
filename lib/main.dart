@@ -173,6 +173,7 @@ class _FeedState extends State<Feed> {
                               'add a thought',
                               textAlign: TextAlign.center,
                               style: TextStyle(
+                                  fontFamily: 'Product-Sans-Regular',
                                   color: Color.fromRGBO(23, 22, 38, 0.5),
                                   fontSize: 16,
                                   fontWeight: FontWeight.w500),
@@ -203,6 +204,7 @@ class _FeedState extends State<Feed> {
                               'post a project',
                               textAlign: TextAlign.center,
                               style: TextStyle(
+                                  fontFamily: 'Product-Sans-Regular',
                                   color: Color.fromRGBO(23, 22, 38, 0.5),
                                   fontSize: 16,
                                   fontWeight: FontWeight.w500),
@@ -232,15 +234,54 @@ class _FeedState extends State<Feed> {
                           Radius.circular(15),
                         ),
                         color: Colors.white),
+                    child: Column(
+                      children: [
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Row(
+                              children: [
+                                Image.asset('assets/Image4@2x.png',
+                                    height: 47, width: 47),
+                                SizedBox(width: 8),
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: const [
+                                    Text(
+                                      'Fajas OK',
+                                      style: TextStyle(
+                                          fontFamily: 'Axiforma-Regular',
+                                          fontSize: 18,
+                                          fontWeight: FontWeight.w500,
+                                          color: Color.fromRGBO(23, 22, 38, 1)),
+                                    ),
+                                    Text('Architect',
+                                        textAlign: TextAlign.left,
+                                        style: TextStyle(
+                                            fontFamily: 'Axiforma-Regular',
+                                            fontSize: 14,
+                                            fontWeight: FontWeight.w400,
+                                            color: Color.fromRGBO(
+                                                118, 129, 168, 1)))
+                                  ],
+                                )
+                              ],
+                            ),
+                            Image.asset('assets/3dots@2x.png')
+                          ],
+                        ),
+                      ],
+                    ),
                   )),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               ConstrainedBox(
-                constraints: BoxConstraints(
+                constraints: const BoxConstraints(
                   minHeight: 512.04,
                 ),
                 child: Container(
-                  margin: EdgeInsets.symmetric(horizontal: 10),
-                  padding: EdgeInsets.symmetric(horizontal: 10, vertical: 0),
+                  margin: const EdgeInsets.symmetric(horizontal: 10),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 10, vertical: 0),
                   decoration: const BoxDecoration(
                       borderRadius: BorderRadius.all(
                         Radius.circular(15),
