@@ -12,17 +12,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'delopus',
       theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // Try running your application with "flutter run". You'll see the
-        // application has a blue toolbar. Then, without quitting the app, try
-        // changing the primarySwatch below to Colors.green and then invoke
-        // "hot reload" (press "r" in the console where you ran "flutter run",
-        // or simply save your changes to "hot reload" in a Flutter IDE).
-        // Notice that the counter didn't reset back to zero; the application
-        // is not restarted.
         primarySwatch: Colors.blue,
       ),
       home: const Feed(),
@@ -130,10 +121,11 @@ class _FeedState extends State<Feed> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     ConstrainedBox(
-                      constraints: BoxConstraints(minHeight: 50, minWidth: 40),
+                      constraints:
+                          const BoxConstraints(minHeight: 50, minWidth: 40),
                       child: Container(
-                        padding:
-                            EdgeInsets.symmetric(horizontal: 9, vertical: 5),
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 9, vertical: 5),
                         decoration: const BoxDecoration(
                             borderRadius: BorderRadius.all(
                               Radius.circular(15),
@@ -152,10 +144,11 @@ class _FeedState extends State<Feed> {
                     ),
                     SizedBox(width: 10),
                     ConstrainedBox(
-                      constraints: BoxConstraints(minHeight: 50, minWidth: 10),
+                      constraints:
+                          const BoxConstraints(minHeight: 50, minWidth: 10),
                       child: Container(
-                        padding:
-                            EdgeInsets.symmetric(horizontal: 10, vertical: 0),
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 10, vertical: 0),
                         decoration: const BoxDecoration(
                             borderRadius: BorderRadius.all(
                               Radius.circular(15),
@@ -168,7 +161,7 @@ class _FeedState extends State<Feed> {
                               height: 27,
                               width: 27,
                             ),
-                            SizedBox(width: 10),
+                            const SizedBox(width: 10),
                             const Text(
                               'add a thought',
                               textAlign: TextAlign.center,
@@ -183,10 +176,11 @@ class _FeedState extends State<Feed> {
                       ),
                     ),
                     ConstrainedBox(
-                      constraints: BoxConstraints(minHeight: 50, minWidth: 10),
+                      constraints:
+                          const BoxConstraints(minHeight: 50, minWidth: 10),
                       child: Container(
-                        padding:
-                            EdgeInsets.symmetric(horizontal: 10, vertical: 0),
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 10, vertical: 0),
                         decoration: const BoxDecoration(
                             borderRadius: BorderRadius.all(
                               Radius.circular(15),
@@ -199,7 +193,7 @@ class _FeedState extends State<Feed> {
                               height: 27,
                               width: 27,
                             ),
-                            SizedBox(width: 10),
+                            const SizedBox(width: 10),
                             const Text(
                               'post a project',
                               textAlign: TextAlign.center,
@@ -216,19 +210,19 @@ class _FeedState extends State<Feed> {
                   ],
                 ),
               ),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
 
               // FEED DATA
               // FEED DATA
               // FEED DATA
 
               ConstrainedBox(
-                  constraints: BoxConstraints(
+                  constraints: const BoxConstraints(
                     minHeight: 512.04,
                     maxHeight: 512.04,
                   ),
                   child: Container(
-                    margin: EdgeInsets.symmetric(horizontal: 10),
+                    margin: const EdgeInsets.symmetric(horizontal: 10),
                     decoration: const BoxDecoration(
                         borderRadius: BorderRadius.all(
                           Radius.circular(15),
@@ -237,7 +231,7 @@ class _FeedState extends State<Feed> {
                     child: Column(
                       children: [
                         Container(
-                          padding: EdgeInsets.symmetric(
+                          padding: const EdgeInsets.symmetric(
                               horizontal: 10, vertical: 10),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -246,7 +240,7 @@ class _FeedState extends State<Feed> {
                                 children: [
                                   Image.asset('assets/Image4@2x.png',
                                       height: 47, width: 47),
-                                  SizedBox(width: 8),
+                                  const SizedBox(width: 8),
                                   Column(
                                     crossAxisAlignment:
                                         CrossAxisAlignment.start,
@@ -286,7 +280,8 @@ class _FeedState extends State<Feed> {
                           width: 500.53,
                         ),
                         Container(
-                          margin: EdgeInsets.only(top: 10, right: 12, left: 10),
+                          margin: const EdgeInsets.only(
+                              top: 10, right: 12, left: 10),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
@@ -297,13 +292,13 @@ class _FeedState extends State<Feed> {
                                     height: 30,
                                     width: 30,
                                   ),
-                                  SizedBox(width: 5),
+                                  const SizedBox(width: 5),
                                   Image.asset(
                                     'assets/saveline-orange@2x.png',
                                     height: 30,
                                     width: 30,
                                   ),
-                                  SizedBox(width: 5),
+                                  const SizedBox(width: 5),
                                   Image.asset(
                                     'assets/comment@2x.png',
                                     height: 30,
