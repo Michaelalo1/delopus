@@ -170,6 +170,9 @@ class _FeedState extends State<Feed> {
                       ),
                     ),
                     SizedBox(width: 10),
+
+                    // ADD THOUGHT SECTION
+
                     ConstrainedBox(
                       constraints:
                           const BoxConstraints(minHeight: 50, minWidth: 10),
@@ -183,12 +186,17 @@ class _FeedState extends State<Feed> {
                             color: Colors.white),
                         child: Row(
                           children: [
+                            // Add a thought Icon(image)
+
                             Image.asset(
                               'assets/newforumpost@2x.png',
                               height: 27,
                               width: 27,
                             ),
                             const SizedBox(width: 10),
+
+                            // Add a thought Text
+
                             const Text(
                               'add a thought',
                               textAlign: TextAlign.center,
@@ -202,6 +210,9 @@ class _FeedState extends State<Feed> {
                         ),
                       ),
                     ),
+
+                    // Post a project container
+
                     ConstrainedBox(
                       constraints:
                           const BoxConstraints(minHeight: 50, minWidth: 10),
