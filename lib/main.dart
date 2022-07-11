@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/painting.dart';
 
 void main() {
   runApp(const MyApp());
@@ -33,7 +32,11 @@ class _FeedState extends State<Feed> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color.fromRGBO(230, 230, 230, 1),
-      body: Column(
+      body:
+
+          // Custom AppBar for delopus Feed Page
+
+          Column(
         children: [
           ConstrainedBox(
             constraints: const BoxConstraints(
@@ -47,16 +50,24 @@ class _FeedState extends State<Feed> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
+                  // User Avatar Image on AppBar
+
                   Image.asset(
                     'assets/Layer9copy2x.png',
                     height: 46,
                     width: 45,
                   ),
+
+                  //delopus logon on AppBar
+
                   Image.asset(
                     'assets/Layer2copy11@2x.png',
                     height: 28.5,
                     width: 95.3,
                   ),
+
+                  // Hamburger for Menu on AppBar
+
                   Image.asset(
                     'assets/Layer11copy.png',
                     height: 25,
@@ -66,12 +77,17 @@ class _FeedState extends State<Feed> {
               ),
             ),
           ),
+
+          // Header tabs (DISCUSSIONS, PROJECTS, MY PROJECTS)
+
           Container(
             padding:
                 const EdgeInsets.symmetric(horizontal: 10, vertical: 10.45),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: const [
+                // DISCUSSIONS TAB
+
                 Text(
                   'DISCUSSIONS',
                   textAlign: TextAlign.left,
@@ -82,6 +98,9 @@ class _FeedState extends State<Feed> {
                     color: Color.fromRGBO(23, 22, 38, 1),
                   ),
                 ),
+
+                // PROJECTS TAB
+
                 Text(
                   'PROJECTS',
                   textAlign: TextAlign.center,
@@ -92,6 +111,8 @@ class _FeedState extends State<Feed> {
                     color: Color.fromRGBO(243, 153, 15, 1),
                   ),
                 ),
+
+                // MY PROJECTS TAB
                 Text(
                   'MY PROJECTS',
                   textAlign: TextAlign.right,
@@ -105,6 +126,9 @@ class _FeedState extends State<Feed> {
               ],
             ),
           ),
+
+          // ORANGE DIVIDER IN HEADER SECTION
+
           const Divider(
             color: Color.fromRGBO(243, 153, 15, 1),
             height: 0,
@@ -112,6 +136,7 @@ class _FeedState extends State<Feed> {
             indent: 0,
             endIndent: 0,
           ),
+
           Expanded(
               child: ListView(
             children: [
@@ -133,6 +158,8 @@ class _FeedState extends State<Feed> {
                             color: Colors.white),
                         child: Row(
                           children: [
+                            // SETTINGS ICON
+
                             Image.asset(
                               'assets/settings1@2x.png',
                               height: 30,
@@ -386,7 +413,7 @@ class _FeedState extends State<Feed> {
                                 children: [
                                   Image.asset('assets/Image4@2x.png',
                                       height: 47, width: 47),
-                                  SizedBox(width: 8),
+                                  const SizedBox(width: 8),
                                   Column(
                                     crossAxisAlignment:
                                         CrossAxisAlignment.start,
