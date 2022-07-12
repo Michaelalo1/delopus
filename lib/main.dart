@@ -281,6 +281,8 @@ class _FeedState extends State<Feed> {
                             children: [
                               Row(
                                 children: [
+                                  // User Avatar Image on feed post
+
                                   Image.asset('assets/Image4@2x.png',
                                       height: 47, width: 47),
                                   const SizedBox(width: 8),
@@ -288,6 +290,8 @@ class _FeedState extends State<Feed> {
                                     crossAxisAlignment:
                                         CrossAxisAlignment.start,
                                     children: const [
+                                      // User Display Name on Feed Post
+
                                       Text(
                                         'Fajas OK',
                                         style: TextStyle(
@@ -297,6 +301,9 @@ class _FeedState extends State<Feed> {
                                             color:
                                                 Color.fromRGBO(23, 22, 38, 1)),
                                       ),
+
+                                      // User Role (Architect, Student, Etc)
+
                                       Text('Architect',
                                           textAlign: TextAlign.left,
                                           style: TextStyle(
@@ -309,6 +316,8 @@ class _FeedState extends State<Feed> {
                                   )
                                 ],
                               ),
+
+                              // Hamburger Icon(3 dots Image) for options on Feed Post
                               Image.asset(
                                 'assets/3dots@2x.png',
                                 height: 32,
