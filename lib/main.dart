@@ -226,12 +226,17 @@ class _FeedState extends State<Feed> {
                             color: Colors.white),
                         child: Row(
                           children: [
+                            // Image icon(image)
+
                             Image.asset(
                               'assets/addimage@2x.png',
                               height: 27,
                               width: 27,
                             ),
                             const SizedBox(width: 10),
+
+                            // Post a project text
+
                             const Text(
                               'post a project',
                               textAlign: TextAlign.center,
