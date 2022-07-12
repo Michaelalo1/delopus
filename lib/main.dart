@@ -335,6 +335,8 @@ class _FeedState extends State<Feed> {
                           height: 305.61,
                           width: 500.53,
                         ),
+
+                        // SECTION CONTAINING LIKES, COMMENTS, SAVE, AND SHARE ICONS
                         Container(
                           margin: const EdgeInsets.only(
                               top: 10, right: 12, left: 10),
@@ -343,18 +345,23 @@ class _FeedState extends State<Feed> {
                             children: [
                               Row(
                                 children: [
+                                  // Like Button on Feed Post
                                   Image.asset(
                                     'assets/like-orange@2x.png',
                                     height: 30,
                                     width: 30,
                                   ),
                                   const SizedBox(width: 5),
+
+                                  // Save Button on Feed Post
                                   Image.asset(
                                     'assets/saveline-orange@2x.png',
                                     height: 30,
                                     width: 30,
                                   ),
                                   const SizedBox(width: 5),
+
+                                  // Comments Button on Feed Post
                                   Image.asset(
                                     'assets/comment@2x.png',
                                     height: 30,
@@ -362,6 +369,8 @@ class _FeedState extends State<Feed> {
                                   )
                                 ],
                               ),
+
+                              // Share Button on Feed Post
                               Image.asset(
                                 'assets/send-orange@2x.png',
                                 height: 30,
@@ -370,10 +379,13 @@ class _FeedState extends State<Feed> {
                             ],
                           ),
                         ),
+
+                        // SECTION CONTAINING LIKES & COMMENTS DATA
                         Container(
                           padding: const EdgeInsets.only(left: 10, top: 10),
                           child: Row(
                             children: const [
+                              // LIKES
                               Text(
                                 '10 likes',
                                 style: TextStyle(
@@ -388,6 +400,8 @@ class _FeedState extends State<Feed> {
                                     color: Color.fromRGBO(143, 160, 174, 1)),
                               ),
                               SizedBox(width: 5),
+
+                              // COMMENTS
                               Text(
                                 '0 comments',
                                 style: TextStyle(
