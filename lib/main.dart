@@ -318,6 +318,7 @@ class _FeedState extends State<Feed> {
                               ),
 
                               // Hamburger Icon(3 dots Image) for options on Feed Post
+
                               Image.asset(
                                 'assets/3dots@2x.png',
                                 height: 32,
@@ -326,6 +327,9 @@ class _FeedState extends State<Feed> {
                             ],
                           ),
                         ),
+
+                        // Main Post Image on Feed post
+
                         Image.asset(
                           'assets/Image3@2x.png',
                           height: 305.61,
